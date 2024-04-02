@@ -8,6 +8,5 @@ import imageUrlBuilder from '@sanity/image-url'
 // parameters:
 
 export default function urlFor(source) {
-  console.log(imageUrlBuilder(client))
   return imageUrlBuilder(client).image(source)
 }

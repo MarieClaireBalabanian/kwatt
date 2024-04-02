@@ -11,7 +11,7 @@ const BlockHero = ( props ) => {
       class="background-cover absolute-cover pseudo-after"
       isEager
     /> */}
-   <GlobalImage image={props.block.image} />
+   <GlobalImage image={props?.block?.image?.image?.asset} />
     <div className="container text-center">
       <h1 className="heading">
         {/* <span className="h4">a</span> */}
