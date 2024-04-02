@@ -1,0 +1,69 @@
+button {
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    display: inline-block;
+    padding: 0;
+}
+
+.text-link {
+    font-size: .9rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: .3rem 10px .2rem;
+    transition: .2s ease;
+    border-bottom: 2px solid transparent;
+    svg {
+        display: inline-block;
+        transform: translate(10px, -2px);
+    }
+
+    &:hover, &:focus {
+        border-color: $white;
+    }
+
+}
+.button {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: .6rem .8rem .5rem;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    background: $white;
+    color: $black;
+    transition:  .25s ease;
+    background-color: $rust;
+    color: $white;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        border-radius: .5em;
+    }
+
+    &.button-black {
+        color: $white;
+        background: $black;
+        transform-origin: left center;
+    }
+}
+
+.meta-actions {
+    position: absolute;
+    z-index: 99999999;
+    top: 8px;
+    left: 20px;
+    color: $white;
+
+    a {
+        border: none;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        background: $red;
+        font-weight: 700;
+        padding: .7rem .5rem;
+    }
+}

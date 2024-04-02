@@ -1,0 +1,151 @@
+$header-height: 45px;
+
+.grid {
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    @for $i from 1 through 8 {
+        .grid-#{$i} {
+            grid-template-columns: repeat($i, minmax(0, #{$i}fr));
+        }
+    }
+}
+
+.absolute-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.m-auto {
+    margin-right: auto;
+    margin-left: auto;
+
+
+}
+
+.mright-auto {
+    margin-right: auto;
+}
+
+.mleft-auto {
+    margin-left: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+
+.mobile-only {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.desktop-only {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 40px;
+    }
+}
+
+.mb-80 {
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 80px;
+    }
+}
+
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+}
+
+.clip {
+    -webkit-clip-path: polygon(0 0,
+            0 0,
+            98% 0,
+            c 98% 28%,
+            100% 28%,
+            100% 100%,
+            35% 100%,
+            35% 97%,
+            2% 97%,
+            2% 57%,
+            0 57%);
+    clip-path: polygon(0 0,
+            0 0,
+            98% 0,
+            98% 28%,
+            100% 28%,
+            100% 100%,
+            35% 100%,
+            35% 97%,
+            2% 97%,
+            2% 57%,
+            0 57%);
+}
+
+
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: 400ms ease-in-out;
+    opacity: 0;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-to {
+    opacity: 1;
+}
+
+
+
+
+a,
+button,
+input,
+textarea,
+select {
+    &:focus {
+        outline-color: #58aeff;
+        outline-offset: 2px;
+        outline-style: solid;
+        outline-width: 2px;
+    }
+}

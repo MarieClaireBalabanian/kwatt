@@ -1,0 +1,23 @@
+.block-hero {
+    padding: 100px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .h1 {
+        margin: .2em 0;
+        display: block;
+    }
+
+    .container {
+        z-index: 2;
+    }
+
+    video {
+        background: white;
+        opacity: .2;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+}

@@ -1,0 +1,30 @@
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex-grow: 1;
+    min-height: 100vh;
+}
+
+body {
+    position: relative;
+    scroll-behavior: smooth;
+
+    &.lock-scroll {
+        overflow: hidden;
+
+        #app {
+            overflow: hidden;
+            pointer-events: none;
+            touch-action: none;
+        }
+    }
+}
+
+.block:focus {
+    outline: none;
+}
+
