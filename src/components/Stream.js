@@ -1,4 +1,4 @@
-import DynamicComponent from "./DynamicComponent";
+import DynamicComponent from "./DynamicComponent"
 
 const Stream = ({ blocks }) => {
     return (
@@ -8,7 +8,8 @@ const Stream = ({ blocks }) => {
                     is={`Block${block._type}`} 
                     block={block} 
                     key={block._key}
-                    className={`block-${block._type.toLowerCase()}`}
+                    tabIndex="-1"
+                    className={`block-padding block-${block._type.toLowerCase()}`}
                     id={`${block._type.toLowerCase()}`}
                  />
             ))}

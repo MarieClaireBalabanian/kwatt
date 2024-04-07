@@ -9,18 +9,15 @@ $max-container: 1400px;
   }
 }
 
-
-// container gutter
-$gutter: 20px;
-@media (min-width: 768px) {
-  $gutter: 40px;
-}
-
-
 .block-padding {
    padding: 50px 0; 
    
   @media (min-width: 768px) {
     padding: 140px 0;
   }
+}
+
+
+img {
+  max-width: 100%;
 }

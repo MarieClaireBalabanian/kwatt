@@ -1,7 +1,27 @@
 $header-height: 45px;
 
+
+.col {
+    column-gap: 5px;
+    li {
+        break-inside: avoid;
+    }
+}
+@media (min-width: 768px) {
+    @for $i from 1 through 8 {
+        .col-#{$i} {
+            columns: 2;
+        }
+    }
+}
+
 .grid {
     display: grid;
+    grid-gap: 5px;
+
+    .full {
+        grid-column: 1 / -1;
+    }
 }
 
 @media (min-width: 768px) {
@@ -25,8 +45,6 @@ $header-height: 45px;
 .m-auto {
     margin-right: auto;
     margin-left: auto;
-
-
 }
 
 .mright-auto {
@@ -82,7 +100,6 @@ $header-height: 45px;
     }
 }
 
-
 .flex-align-center {
     display: flex;
     align-items: center;
@@ -92,32 +109,11 @@ $header-height: 45px;
     }
 }
 
-.clip {
-    -webkit-clip-path: polygon(0 0,
-            0 0,
-            98% 0,
-            c 98% 28%,
-            100% 28%,
-            100% 100%,
-            35% 100%,
-            35% 97%,
-            2% 97%,
-            2% 57%,
-            0 57%);
-    clip-path: polygon(0 0,
-            0 0,
-            98% 0,
-            98% 28%,
-            100% 28%,
-            100% 100%,
-            35% 100%,
-            35% 97%,
-            2% 97%,
-            2% 57%,
-            0 57%);
+.column-vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-
 
 .fade-enter-active,
 .fade-leave-active {

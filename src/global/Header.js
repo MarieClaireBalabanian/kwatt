@@ -18,7 +18,7 @@ const Header = () => {
 
                     <div className="items-wrapper">
                         <div className="container">
-                            <div className="inner-menu" tabindex="-1" id="inner-menu" aria-label="Expanded Navigation">
+                            <div className="inner-menu" tabIndex="-1" id="inner-menu" aria-label="Expanded Navigation">
                                 <ul className="items">
                                     <li><a href="/">Work</a></li>
                                     <li><a href="/">About</a></li>

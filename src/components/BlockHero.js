@@ -1,25 +1,24 @@
-import GlobalImage from './GlobalImage'
+// import GlobalImage from './GlobalImage';
+import styled from "styled-components";
+
+const StyledHero = styled.section`
+  min-height: 100vh;
+  position: relative;
+
+  h1 {
+    margin: .2em 0;
+  }
+`
+
 const BlockHero = ( props ) => {
   return (
-    <section className={props.className} id={props.id}>
-        {/* <video playsinline loop muted autoplay className="absolute-cover">
-            <source src="/0226.mp4" type="video/mp4" />
-        </video> */}
-    {/* <GlobalImage
-      :gImage="block.image.image"
-      size="desktop-medium"
-      class="background-cover absolute-cover pseudo-after"
-      isEager
-    /> */}
-   <GlobalImage image={props?.block?.image?.image?.asset} />
-    <div className="container text-center">
-      <h1 className="heading">
-        {/* <span className="h4">a</span> */}
-        <span className="h1">{props.block.name}</span>
-        <span className="h4">{props.block.job_title}</span>
-      </h1>
-    </div>
-  </section>
+    <StyledHero className={`column-vertical-center ${props.className}`} id={props.id} tabIndex={props.tabIndex}>
+      {/* <GlobalImage image={props?.block?.image} className="background-cover" /> */}
+      <div className="container text-center z-2">
+        <h1 className="h1">{props.block.name}</h1>
+        <h2 className="h4">{props.block.job_title}</h2>
+      </div>
+    </StyledHero>
   );
 };
 

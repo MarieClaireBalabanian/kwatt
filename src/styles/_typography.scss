@@ -12,16 +12,6 @@ body {
   font-family: $title;
 }
 
-.text-gradient {
-  background: linear-gradient(217deg,
-      rgba($bluegreen, 1),
-      rgba(255, 0, 0, 0) 100.71%),
-      linear-gradient(127deg, rgba($rust, 1), rgba(0, 255, 0, 0) 90.71%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .h2 {
   font-size: 3rem;
   font-weight: 400;
@@ -94,7 +84,6 @@ body {
 .paragraph, .h6 {
   font-size: 1.1rem;
   line-height: 1.5em;
-  color: $gray;
   font-weight: 300;
   * + p {
     margin-top: 1.5rem;
@@ -102,9 +91,7 @@ body {
 
   h3 {
     @extend .h3;
-    @extend .mb-20;
     text-transform: uppercase;
-    @extend .text-gradient;
   }
 
   ul {
@@ -147,48 +134,12 @@ body {
   line-height: 1.6em;
 }
 
-.text-blue {
-  color: $blue;
-}
 
-
-.text-bluegreen {
-  color: $bluegreen;
-}
-
-.text-white {
-  color: $white;
-}
-
-.text-cream {
-  color: $cream;
-}
-
-.text-rust {
-  color: $rust;
-}
-
-.text-black {
-  color: $black;
-}
-
-.text-rust-light {
-  color: $rust-light;
-}
 
 .bold {
   font-weight: 700;
 }
 
-.section-header {
-  letter-spacing: 0;
-  line-height: .7em;
-}
-
 .uppercase {
   text-transform: uppercase;
-}
-
-.text-tan {
-  color: $tan;
 }
