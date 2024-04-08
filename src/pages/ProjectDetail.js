@@ -57,7 +57,6 @@ const ProjectDetail = () => {
                 is={`Partials${block._type}`}
                 block={block}
                 key={`flex-${block._key}`}
-                tabIndex="-1"
                 className="flex-block"
               />
             ))}
