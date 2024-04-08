@@ -8,7 +8,7 @@ const PartialsGallery = (props) => {
 
                 {
                     props.block.images.map((image) => (
-                       <li className={!image.portrait ? 'full' : ''}>
+                       <li className={!image.portrait ? 'full' : ''} key={image.asset._ref}>
                             <GlobalImage image={image} />
                        </li>
                     ))

@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 import GlobalImage from './GlobalImage';
 import styled from "styled-components";
@@ -59,11 +59,15 @@ const StyledProject = styled.li`
   }
 `
 const BlockWorkItem = ({ project }) => {
-  const [ isShowing, setIsShowing ] = useState(false)
-  const showingClass = isShowing ? 'showing' : '';
+  const projectRef = useRef()
+
+  function setIsShowing(val) {
+    if (val) projectRef.current.classList.add('showing')
+    else projectRef.current.classList.remove('showing')
+  }
 
   return (
-    <StyledProject className={`relative text-center text-white column-vertical-center ${showingClass}`}
+    <StyledProject ref={projectRef} className={`relative text-center text-white column-vertical-center`}
       onMouseEnter={() => setIsShowing(true)}
       onMouseLeave={() => setIsShowing(false)}>
       <div className="image-wrapper absolute-cover">

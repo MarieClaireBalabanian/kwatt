@@ -2,7 +2,7 @@ import { PortableText } from '@portabletext/react'
 import GlobalImage from './GlobalImage'
 
 const BlockAbout = ( props ) => {
-  console.log(props)
+  // console.log(props)
   return (
     <section className={`bg-black text-white text-center ${props.className}`} id={props.id} tabIndex={props.tabIndex}>
       <div className="container">

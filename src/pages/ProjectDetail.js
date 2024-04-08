@@ -46,7 +46,7 @@ const ProjectDetail = () => {
     <StyledContent className="container">
       <h1 className="h2-large mb-40">{project.title}</h1>
       <div className="content">
-        <section class="paragraph mb-40 mobile-only">
+        <section className="paragraph mb-40 mobile-only">
           <PortableText value={project.description} />
         </section>
 
@@ -64,7 +64,7 @@ const ProjectDetail = () => {
           </section>
         )}
 
-        <section class="paragraph mb-40 desktop-only">
+        <section className="paragraph mb-40 desktop-only">
           <PortableText value={project.description} />
         </section>
       </div>
